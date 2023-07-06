@@ -1,0 +1,73 @@
+name: kotlin-atlassian-client-typescript-companion - default
+
+on:
+    push:
+        branches:
+            - "main"
+    release:
+        types: [created]
+    schedule:
+        - cron: "0 6 * * 1" # At 06:00 on Monday
+    workflow_dispatch: # to run from the Actions tab on GitHub
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: "19.1.0"
+            - name: npm install
+              run: npm install
+
+            - name: npm build library
+              run: npm run build:lib
+
+#            - name: npm build showcase
+#              run: npm run build:sc
+#
+#            - name: deploy Showcase to Github Pages
+#              if: ${{ github.event_name == 'release' }}
+#              uses: JamesIves/github-pages-deploy-action@v4.4.1
+#              with:
+#                  branch: docs
+#                  folder: dist-showcase
+#                  single-commit: true
+
+    publish:
+        needs: build
+        if: ${{ github.event_name == 'release' }}
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: "19.1.0"
+                  registry-url: "https://registry.npmjs.org"
+
+            - name: Get release version
+              id: release
+              run: |
+                  FULL_VERSION=${{ github.event.release.tag_name }}
+                  SHORT_VERSION=${FULL_VERSION:1}
+                  echo shortVersion=${SHORT_VERSION} >> $GITHUB_OUTPUT
+                  
+            - name: Configure Git user
+              run: |
+                  git config user.email "actions@github.com"
+                  git config user.name "GitHub Actions"
+
+            - name: Update release version
+              run: npm version --no-git-tag-version ${{ steps.release.outputs.shortVersion }}
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Build release
+              run: npm run build:lib
+
+            - name: Publish to npmjs
+              run: npm publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{secrets.NPM_PUBLISH_TOKEN}}
