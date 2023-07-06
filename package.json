@@ -1,15 +1,40 @@
 {
-  "name": "kotlin-atlassian-client-typescript-companion",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@linked-planet/kotlin-atlassian-client-typescript-companion",
+  "version": "0.12.9",
+  "description": "Contains useful utility functions to interact with InsightObjects coming out of the kotlin-insight-client.",
+  "license": "Apache-2.0",
   "type": "module",
+  "main": "./dist/kat-companion.umd.cjs",
+  "module": "./dist/kat-companion.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/kat-companion.js",
+      "require": "./dist/kat-companion.umd.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "homepage": "https://github.com/linked-planet/kotlin-atlassian-client-typescript-companion#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linked-planet/kotlin-atlassian-client-typescript-companion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/linked-planet/kotlin-atlassian-client-typescript-companion/issues"
+  },
+  "keywords": ["typescript", "atlassian", "insight", "assets"],
+  "author": "Heiko Guckes",
   "devDependencies": {
+    "@types/node": "^20.4.0",
     "typescript": "^5.0.2",
-    "vite": "^4.4.0"
+    "vite": "^4.4.0",
+    "vite-plugin-dts": "^3.1.0"
   }
 }

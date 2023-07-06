@@ -22,7 +22,7 @@ jobs:
               run: npm install
 
             - name: npm build library
-              run: npm run build:lib
+              run: npm run build
 
 #            - name: npm build showcase
 #              run: npm run build:sc
@@ -65,7 +65,7 @@ jobs:
               run: npm install
 
             - name: Build release
-              run: npm run build:lib
+              run: npm run build
 
             - name: Publish to npmjs
               run: npm publish --access public
