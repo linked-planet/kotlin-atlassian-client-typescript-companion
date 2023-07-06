@@ -1,0 +1,43 @@
+{
+  "name": "@linked-planet/kotlin-atlassian-client-typescript-companion",
+  "version": "0.12.9",
+  "description": "Contains useful utility functions to interact with InsightObjects coming out of the kotlin-insight-client.",
+  "module": "dist/ui-kit.es.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:lib": "vite build -c vite.config.lib.ts && npm run messages:compile",
+    "build:sc": "vite build -c vite.config.showcase.ts && npm run messages:compile && node ./showcase/copySources.js",
+    "preview": "npm run build:sc && vite preview -c vite.config.showcase.ts",
+    "dev:lib": "vite build -c vite.config.lib.ts --watch",
+    "dev:sc": "node ./showcase/copySources.js && npm run messages:compile && vite -c vite.config.showcase.ts --open",
+    "eslint": "eslint **/*.ts*",
+    "stylelint": "stylelint **/*.css",
+    "clean": "rm -rf dist && rm -rf dist-showcase",
+    "messages:extract": "formatjs extract './library/src/**/*.{ts,tsx}' --ignore '**/*.d.ts' --out-file ./library/src/localization/translations/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'",
+    "messages:compile": "formatjs compile-folder library/src/localization/translations library/src/localization/translations-compiled && mkdir -p dist && mkdir -p dist-showcase && cp -r library/src/localization/translations-compiled dist/ && cp -r library/src/localization/translations-compiled showcase/public/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linked-planet/kotlin-atlassian-client-typescript-companion.git"
+  },
+  "keywords": [
+    "typescript",
+    "atlassian",
+    "insight",
+    "assets"
+  ],
+  "author": "Heiko Guckes",
+  "contributors": [
+    {
+      "name": "Markus Toepfer"
+    }
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/linked-planet/kotlin-atlassian-client-typescript-companion/issues"
+  },
+  "homepage": "https://github.com/linked-planet/kotlin-atlassian-client-typescript-companion#readme"
+}

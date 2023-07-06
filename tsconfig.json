@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./library",
+    "paths": {
+      "@linked-planet/kotlin-atlassian-client-typescript-companion": ["library/src"],
+      "@linked-planet/kotlin-atlassian-client-typescript-companion/*": ["library/src/*"],
+    },
+    "types": ["vite/client"]
+  },
+  "include": ["library/src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
