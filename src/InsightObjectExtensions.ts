@@ -11,7 +11,6 @@ declare module "./generated-model" { // to tell the compiler that the generated 
 
         getStringValuesFor(attributeName: String): string[]
     }
-    export = InsightObject;
 }
 
 declare module "./ApiClasses/InsightObjectClass" { // to tell the compiler that the class itself provides the function we provide below
@@ -22,7 +21,6 @@ declare module "./ApiClasses/InsightObjectClass" { // to tell the compiler that 
 
         getStringValuesFor(attributeName: String): string[]
     }
-    export = InsightObjectClass;
 }
 
 InsightObjectClass.prototype.getAttributeByName = (attributeName: String): InsightAttribute | undefined => {
