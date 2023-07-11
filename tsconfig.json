@@ -17,8 +17,8 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@linked-planet/kotlin-atlassian-client-typescript-companion": ["library/src"],
-      "@linked-planet/kotlin-atlassian-client-typescript-companion/*": ["library/src/*"],
+      "@linked-planet/kotlin-atlassian-client-typescript-companion": ["src"],
+      "@linked-planet/kotlin-atlassian-client-typescript-companion/*": ["src/*"],
     },
   },
   "include": ["src"],
