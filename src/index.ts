@@ -78,7 +78,7 @@ export function displayValueForAttribute(attribute: InsightAttribute) {
     }
 }
 
-function displayValuesForAttribute(attribute: InsightAttribute): string[] {
+export function displayValuesForAttribute(attribute: InsightAttribute): string[] {
     switch (attribute.type) {
         case "Select":
             return (attribute as Select).values ?? [];
@@ -98,9 +98,9 @@ function displayValuesForAttribute(attribute: InsightAttribute): string[] {
 
 // endregion
 
-// region textValue
+// region values as string
 
-export function textValuesFor(insightObject: InsightObject | undefined, attributeName: String): string[] {
+export function stringValuesFor(insightObject: InsightObject | undefined, attributeName: String): string[] {
     let attribute = attributeByName(insightObject, attributeName)
     if (attribute == undefined) return []
     let displayValues = displayValuesForAttribute(attribute);
@@ -108,7 +108,7 @@ export function textValuesFor(insightObject: InsightObject | undefined, attribut
     return displayValues;
 }
 
-export function textValueFor(insightObject: InsightObject | undefined, attributeName: String): string | undefined {
+export function stringValueFor(insightObject: InsightObject | undefined, attributeName: String): string | undefined {
     let attribute: InsightAttribute | undefined = attributeByName(insightObject, attributeName)
     if (attribute == undefined) return undefined
     if ((attribute.schema?.maximumCardinality ?? 0) > 1) {
@@ -119,7 +119,7 @@ export function textValueFor(insightObject: InsightObject | undefined, attribute
     return displayValue;
 }
 
-export function textValueForAttribute(attribute: InsightAttribute) {
+export function stringValueForAttribute(attribute: InsightAttribute) {
     switch (attribute.type) {
         case "Text":
             return (attribute as Text)?.value;
@@ -154,7 +154,7 @@ export function textValueForAttribute(attribute: InsightAttribute) {
     }
 }
 
-function textValuesForAttribute(attribute: InsightAttribute): string[] {
+export function stringValuesForAttribute(attribute: InsightAttribute): string[] {
     switch (attribute.type) {
         case "Select":
             return (attribute as Select).values ?? [];
