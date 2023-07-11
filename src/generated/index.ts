@@ -26,7 +26,27 @@ export interface Bool {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
     value?: boolean;
 }
 
@@ -39,14 +59,54 @@ export interface BoolSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface Confluence {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface ConfluenceSchema {
@@ -58,7 +118,27 @@ export interface ConfluenceSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface Date {
@@ -66,7 +146,27 @@ export interface Date {
     attributeId: number;
     displayValue?: string;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
     /** @format date */
     value?: string;
 }
@@ -80,7 +180,27 @@ export interface DateSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface DateTime {
@@ -88,7 +208,27 @@ export interface DateTime {
     attributeId: number;
     displayValue?: string;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
     /** @format date-time */
     value?: string;
 }
@@ -102,7 +242,27 @@ export interface DateTimeSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface DomainError {
@@ -114,7 +274,27 @@ export interface DoubleNumber {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
     /** @format double */
     value?: number;
 }
@@ -128,14 +308,54 @@ export interface DoubleNumberSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface Email {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
     value?: string;
 }
 
@@ -148,7 +368,27 @@ export interface EmailSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface ExtendedJiraTransition {
@@ -199,7 +439,27 @@ export interface Group {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface GroupSchema {
@@ -211,7 +471,27 @@ export interface GroupSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface InsightAttachment {
@@ -251,7 +531,27 @@ export type InsightAttribute = (
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 };
 
 export interface InsightConfigEntry {
@@ -330,7 +630,27 @@ export interface Integer {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
     /** @format int32 */
     value?: number;
 }
@@ -344,14 +664,54 @@ export interface IntegerSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface Ipaddress {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
     value?: string;
 }
 
@@ -364,7 +724,27 @@ export interface IpaddressSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface JiraConfigEntry {
@@ -535,7 +915,27 @@ export type ObjectTypeSchemaAttribute = (
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 };
 
 export interface Page {
@@ -561,7 +961,27 @@ export interface Project {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface ProjectConfig {
@@ -589,7 +1009,27 @@ export interface ProjectSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface Reference {
@@ -597,7 +1037,27 @@ export interface Reference {
     attributeId: number;
     referencedObjects: ReferencedObject[];
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface ReferenceSchema {
@@ -612,7 +1072,27 @@ export interface ReferenceSchema {
     referenceKind: "UNKNOWN" | "DEPENDENCY" | "LINK" | "REFERENCE" | "FINANCIAL" | "TECHNICAL";
     /** @format int32 */
     referenceObjectTypeId: number;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface ReferencedObject {
@@ -639,7 +1119,27 @@ export interface Select {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
     values?: string[];
 }
 
@@ -653,14 +1153,54 @@ export interface SelectSchema {
     minimumCardinality: number;
     name: string;
     options: string[];
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface Status {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface StatusSchema {
@@ -672,14 +1212,54 @@ export interface StatusSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface Text {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
     value?: string;
 }
 
@@ -692,14 +1272,54 @@ export interface TextSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface Textarea {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
     value?: string;
 }
 
@@ -712,7 +1332,27 @@ export interface TextareaSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface Time {
@@ -720,7 +1360,27 @@ export interface Time {
     attributeId: number;
     displayValue?: string;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
     value?: LocalTime;
 }
 
@@ -733,7 +1393,27 @@ export interface TimeSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface TimetableObject {
@@ -756,7 +1436,27 @@ export interface Unknown {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface UnknownSchema {
@@ -769,14 +1469,54 @@ export interface UnknownSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface Url {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
     values?: string[];
 }
 
@@ -789,14 +1529,54 @@ export interface UrlSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface User {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
     users: InsightUser[];
 }
 
@@ -809,14 +1589,54 @@ export interface UserSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface Version {
     /** @format int32 */
     attributeId: number;
     schema?: ObjectTypeSchemaAttribute;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
 
 export interface VersionSchema {
@@ -828,5 +1648,25 @@ export interface VersionSchema {
     /** @format int32 */
     minimumCardinality: number;
     name: string;
-    type: AttributeType;
+    type:
+        | "Text"
+        | "Integer"
+        | "Bool"
+        | "DoubleNumber"
+        | "Select"
+        | "Date"
+        | "Time"
+        | "DateTime"
+        | "Url"
+        | "Email"
+        | "Textarea"
+        | "Ipaddress"
+        | "Reference"
+        | "User"
+        | "Confluence"
+        | "Group"
+        | "Version"
+        | "Project"
+        | "Status"
+        | "Unknown";
 }
