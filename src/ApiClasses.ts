@@ -1,4 +1,4 @@
-import {InsightAttribute, InsightObject} from "../generated-model";
+import {InsightAttribute, InsightObject} from "./generated";
 
 export class InsightObjectClass implements InsightObject {
     attachmentsExist!: boolean;

@@ -1,9 +1,9 @@
 // noinspection ES6UnusedImports, because they are used by the module declaration
-import {InsightAttribute, InsightObject} from "./generated-model";
-import {InsightObjectClass} from "./ApiClasses/InsightObjectClass"
-import {attributeByName, displayValuesFor, stringValuesFor} from "@linked-planet/kotlin-atlassian-client-typescript-companion";
+import {InsightAttribute, InsightObject} from "./generated";
+import {InsightObjectClass} from "./ApiClasses"
+import {attributeByName, displayValuesFor, stringValuesFor} from "./index";
 
-declare module "./generated-model" { // to tell the compiler that the generated interface provides the function
+declare module "./generated" { // to tell the compiler that the generated interface provides the function
     interface InsightObject {
         getAttributeByName(attributeName: String): InsightAttribute | undefined
 
@@ -13,7 +13,7 @@ declare module "./generated-model" { // to tell the compiler that the generated 
     }
 }
 
-declare module "./ApiClasses/InsightObjectClass" { // to tell the compiler that the class itself provides the function we provide below
+declare module "./ApiClasses" { // to tell the compiler that the class itself provides the function we provide below
     interface InsightObjectClass {
         getAttributeByName(attributeName: String): InsightAttribute | undefined
 

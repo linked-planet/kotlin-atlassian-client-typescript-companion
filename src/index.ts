@@ -15,8 +15,12 @@ import {
     Textarea,
     Url,
     User
-} from "./generated-model";
-import {AttributeType} from "./generated-model";
+} from "./generated";
+import {AttributeType} from "./generated";
+
+export * from './InsightObjectExtensions'
+export * from './ApiClasses'
+export * from './InterfaceToClassTransformer'
 
 export function attributeByName(insightObject: InsightObject | undefined, attributeName: String): InsightAttribute | undefined {
     return insightObject?.attributes?.find((item) => item.schema?.name == attributeName);

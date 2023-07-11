@@ -2,10 +2,7 @@
  * The API delivers plain json objects, but for some types we need classes, so we can add extension methods
  * @param json a json object tree
  */
-import {
-    InsightObjectClass,
-    isInsightObject
-} from "@linked-planet/kotlin-atlassian-client-typescript-companion/ApiClasses/InsightObjectClass";
+import {InsightObjectClass, isInsightObject} from "./ApiClasses";
 
 export function transformJsonObjectsToClass(json: any): any {
     if (isInsightObject(json)) {
