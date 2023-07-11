@@ -3,7 +3,7 @@ import {InsightAttribute, InsightObject} from "./generated";
 import {InsightObjectClass} from "./ApiClasses"
 import {attributeByName, displayValuesFor, stringValuesFor} from "./index";
 
-declare global { // to tell the compiler that the generated interface provides the function
+declare module "./generated" { // to tell the compiler that the generated interface provides the function
     interface InsightObject {
         getAttributeByName(attributeName: String): InsightAttribute | undefined
 
