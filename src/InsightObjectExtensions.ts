@@ -1,36 +1,64 @@
-// noinspection ES6UnusedImports, because they are used by the module declaration
-import {InsightAttribute, InsightObject} from "./generated";
-import {InsightObjectClass} from "./ApiClasses"
-import {attributeByName, displayValuesFor, stringValuesFor} from "./index";
+import {InsightAttribute, InsightObject, Reference, Text, Textarea} from "./generated";
+import {
+    attributeByName,
+    displayValuesFor,
+    referenceAttribute,
+    stringValuesFor,
+    textareaAttribute,
+    textAttribute
+} from "./InsightObjectMethods";
 
-declare module "./generated" { // to tell the compiler that the generated interface provides the function
-    interface InsightObject {
-        getAttributeByName(attributeName: String): InsightAttribute | undefined
+export interface InsightObjectExtensionMethods {
+    getAttributeByName(attributeName: String): InsightAttribute | undefined
 
-        getDisplayValuesFor(attributeName: String): string[]
+    getDisplayValuesFor(attributeName: String): string[]
 
-        getStringValuesFor(attributeName: String): string[]
+    getStringValuesFor(attributeName: String): string[]
+
+    getTextAttribute(attributeName: String): Text | undefined
+
+    getReferenceAttribute(attributeName: String): Reference | undefined
+
+    getTextareaAttribute(attributeName: String): Textarea | undefined
+}
+
+declare module "./generated" { // to tell the compiler that the generated interface provides the methods
+    interface InsightObject extends InsightObjectExtensionMethods {
     }
 }
 
-declare module "./ApiClasses" { // to tell the compiler that the class itself provides the function we provide below
-    interface InsightObjectClass {
-        getAttributeByName(attributeName: String): InsightAttribute | undefined
+export class InsightObjectClass implements InsightObject {
+    attachmentsExist!: boolean;
+    attributes!: InsightAttribute[];
+    id!: number;
+    label!: string;
+    objectKey!: string;
+    objectSelf!: string;
+    objectTypeId!: number;
+    objectTypeName!: string;
 
-        getDisplayValuesFor(attributeName: String): string[]
-
-        getStringValuesFor(attributeName: String): string[]
+    constructor(config: InsightObject) {
+        // noinspection TypeScriptValidateTypes
+        Object.assign(this, config);
     }
+
+    getAttributeByName = (attributeName: String): InsightAttribute | undefined => attributeByName(this, attributeName)
+    getDisplayValuesFor = (attributeName: String): string[] => displayValuesFor(this, attributeName)
+    getStringValuesFor = (attributeName: String): string[] => stringValuesFor(this, attributeName)
+    getTextAttribute = (attributeName: String): Text | undefined => textAttribute(this, attributeName)
+    getReferenceAttribute = (attributeName: String): Reference | undefined => referenceAttribute(this, attributeName)
+    getTextareaAttribute = (attributeName: String): Textarea | undefined => textareaAttribute(this, attributeName)
 }
 
-InsightObjectClass.prototype.getAttributeByName = (attributeName: String): InsightAttribute | undefined => {
-    return attributeByName(this, attributeName)
-}
-
-InsightObjectClass.prototype.getDisplayValuesFor = (attributeName: String): string[] => {
-    return displayValuesFor(this, attributeName)
-}
-
-InsightObjectClass.prototype.getStringValuesFor = (attributeName: String): string[] => {
-    return stringValuesFor(this, attributeName)
+export function isInsightObject(obj: any): obj is InsightObject {
+    return (
+        typeof obj === 'object' &&
+        typeof obj.attachmentsExist === 'boolean' &&
+        typeof obj.id === 'number' &&
+        typeof obj.label === 'string' &&
+        typeof obj.objectKey === 'string' &&
+        typeof obj.objectSelf === 'string' &&
+        typeof obj.objectTypeId === 'number' &&
+        typeof obj.objectTypeName === 'string'
+    );
 }

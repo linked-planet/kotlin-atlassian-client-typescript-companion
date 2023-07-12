@@ -265,11 +265,6 @@ export interface DateTimeSchema {
         | "Unknown";
 }
 
-export interface DomainError {
-    error?: string;
-    message?: string;
-}
-
 export interface DoubleNumber {
     /** @format int32 */
     attributeId: number;
