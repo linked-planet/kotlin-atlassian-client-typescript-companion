@@ -1,22 +1,27 @@
 import {
+    AttributeType,
     Bool,
+    Confluence,
     Date,
     DateTime,
     DoubleNumber,
     Email,
+    Group,
     InsightAttribute,
     InsightObject,
     Integer,
     Ipaddress,
+    Project,
     Reference,
     ReferencedObject,
     Select,
+    Status,
     Text,
     Textarea,
     Url,
-    User
+    User,
+    Version
 } from "./generated";
-import {AttributeType} from "./generated";
 
 export function attributeByName(insightObject: InsightObject | undefined, attributeName: String): InsightAttribute | undefined {
     if (insightObject === undefined) return undefined
@@ -198,6 +203,126 @@ export function referenceAttribute(insightObject: InsightObject | undefined, att
 }
 export function asReference(attribute: InsightAttribute | undefined): Reference | undefined {
     return asType<Reference>(attribute, "Reference")
+}
+
+export function integerAttribute(insightObject: InsightObject | undefined, attributeName: String): Integer | undefined {
+    let attribute = attributeByName(insightObject, attributeName)
+    return asInteger(attribute)
+}
+export function asInteger(attribute: InsightAttribute | undefined): Integer | undefined {
+    return asType<Integer>(attribute, "Integer")
+}
+
+export function boolAttribute(insightObject: InsightObject | undefined, attributeName: String): Bool | undefined {
+    let attribute = attributeByName(insightObject, attributeName)
+    return asBool(attribute)
+}
+export function asBool(attribute: InsightAttribute | undefined): Bool | undefined {
+    return asType<Bool>(attribute, "Bool")
+}
+
+export function doubleNumberAttribute(insightObject: InsightObject | undefined, attributeName: String): DoubleNumber | undefined {
+    let attribute = attributeByName(insightObject, attributeName)
+    return asDoubleNumber(attribute)
+}
+export function asDoubleNumber(attribute: InsightAttribute | undefined): DoubleNumber | undefined {
+    return asType<DoubleNumber>(attribute, "DoubleNumber")
+}
+
+export function selectAttribute(insightObject: InsightObject | undefined, attributeName: String): Select | undefined {
+    let attribute = attributeByName(insightObject, attributeName)
+    return asSelect(attribute)
+}
+export function asSelect(attribute: InsightAttribute | undefined): Select | undefined {
+    return asType<Select>(attribute, "Select")
+}
+
+export function dateAttribute(insightObject: InsightObject | undefined, attributeName: String): Date | undefined {
+    let attribute = attributeByName(insightObject, attributeName)
+    return asDate(attribute)
+}
+export function asDate(attribute: InsightAttribute | undefined): Date | undefined {
+    return asType<Date>(attribute, "Date")
+}
+
+export function dateTimeAttribute(insightObject: InsightObject | undefined, attributeName: String): DateTime | undefined {
+    let attribute = attributeByName(insightObject, attributeName)
+    return asDateTime(attribute)
+}
+export function asDateTime(attribute: InsightAttribute | undefined): DateTime | undefined {
+    return asType<DateTime>(attribute, "DateTime")
+}
+
+export function urlAttribute(insightObject: InsightObject | undefined, attributeName: String): Url | undefined {
+    let attribute = attributeByName(insightObject, attributeName)
+    return asUrl(attribute)
+}
+export function asUrl(attribute: InsightAttribute | undefined): Url | undefined {
+    return asType<Url>(attribute, "Url")
+}
+
+export function emailAttribute(insightObject: InsightObject | undefined, attributeName: String): Email | undefined {
+    let attribute = attributeByName(insightObject, attributeName)
+    return asEmail(attribute)
+}
+export function asEmail(attribute: InsightAttribute | undefined): Email | undefined {
+    return asType<Email>(attribute, "Email")
+}
+
+export function ipaddressAttribute(insightObject: InsightObject | undefined, attributeName: String): Ipaddress | undefined {
+    let attribute = attributeByName(insightObject, attributeName)
+    return asIpaddress(attribute)
+}
+export function asIpaddress(attribute: InsightAttribute | undefined): Ipaddress | undefined {
+    return asType<Ipaddress>(attribute, "Ipaddress")
+}
+
+export function userAttribute(insightObject: InsightObject | undefined, attributeName: String): User | undefined {
+    let attribute = attributeByName(insightObject, attributeName)
+    return asUser(attribute)
+}
+export function asUser(attribute: InsightAttribute | undefined): User | undefined {
+    return asType<User>(attribute, "User")
+}
+
+export function confluenceAttribute(insightObject: InsightObject | undefined, attributeName: String): Confluence | undefined {
+    let attribute = attributeByName(insightObject, attributeName)
+    return asConfluence(attribute)
+}
+export function asConfluence(attribute: InsightAttribute | undefined): Confluence | undefined {
+    return asType<Confluence>(attribute, "Confluence")
+}
+
+export function groupAttribute(insightObject: InsightObject | undefined, attributeName: String): Group | undefined {
+    let attribute = attributeByName(insightObject, attributeName)
+    return asGroup(attribute)
+}
+export function asGroup(attribute: InsightAttribute | undefined): Group | undefined {
+    return asType<Group>(attribute, "Group")
+}
+
+export function versionAttribute(insightObject: InsightObject | undefined, attributeName: String): Version | undefined {
+    let attribute = attributeByName(insightObject, attributeName)
+    return asVersion(attribute)
+}
+export function asVersion(attribute: InsightAttribute | undefined): Version | undefined {
+    return asType<Version>(attribute, "Version")
+}
+
+export function projectAttribute(insightObject: InsightObject | undefined, attributeName: String): Project | undefined {
+    let attribute = attributeByName(insightObject, attributeName)
+    return asProject(attribute)
+}
+export function asProject(attribute: InsightAttribute | undefined): Project | undefined {
+    return asType<Project>(attribute, "Project")
+}
+
+export function statusAttribute(insightObject: InsightObject | undefined, attributeName: String): Status | undefined {
+    let attribute = attributeByName(insightObject, attributeName)
+    return asStatus(attribute)
+}
+export function asStatus(attribute: InsightAttribute | undefined): Status | undefined {
+    return asType<Status>(attribute, "Status")
 }
 
 // region private
