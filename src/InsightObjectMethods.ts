@@ -33,9 +33,7 @@ export function attributeByName(insightObject: InsightObject | undefined, attrib
 export function displayValuesFor(insightObject: InsightObject | undefined, attributeName: String): string[] {
     let attribute = attributeByName(insightObject, attributeName)
     if (attribute == undefined) return []
-    let displayValues = displayValuesForAttribute(attribute);
-    console.info(`multiple values for ${insightObject?.objectTypeName}.${attribute.type} == [${displayValues}]`)
-    return displayValues;
+    return displayValuesForAttribute(attribute);
 }
 
 export function displayValueFor(insightObject: InsightObject | undefined, attributeName: String): string | undefined {
@@ -44,9 +42,7 @@ export function displayValueFor(insightObject: InsightObject | undefined, attrib
     if ((attribute.schema?.maximumCardinality ?? 0) > 1) {
         console.info("Used displayValueFor for cardinality > 1" + attributeName + " attribute:" + JSON.stringify(attribute))
     }
-    let displayValue = displayValueForAttribute(attribute);
-    console.info(`single value for: ${insightObject?.objectTypeName}.${attribute.type} == ${displayValue}`)
-    return displayValue;
+    return displayValueForAttribute(attribute);
 }
 
 export function displayValueForAttribute(attribute: InsightAttribute) {
@@ -109,9 +105,7 @@ export function displayValuesForAttribute(attribute: InsightAttribute): string[]
 export function stringValuesFor(insightObject: InsightObject | undefined, attributeName: String): string[] {
     let attribute = attributeByName(insightObject, attributeName)
     if (attribute == undefined) return []
-    let stringValues = stringValuesForAttribute(attribute);
-    console.info(`multiple values for ${insightObject?.objectTypeName}.${attribute.type} == [${stringValues}]`)
-    return stringValues;
+    return stringValuesForAttribute(attribute);
 }
 
 export function stringValueFor(insightObject: InsightObject | undefined, attributeName: String): string | undefined {
@@ -120,9 +114,7 @@ export function stringValueFor(insightObject: InsightObject | undefined, attribu
     if ((attribute.schema?.maximumCardinality ?? 0) > 1) {
         console.info("Used stringValueFor for cardinality > 1" + attributeName + " attribute:" + JSON.stringify(attribute))
     }
-    let stringValue = stringValueForAttribute(attribute);
-    console.info(`single value for: ${insightObject?.objectTypeName}.${attribute.type} == ${stringValue}`)
-    return stringValue;
+    return stringValueForAttribute(attribute);
 }
 
 export function stringValueForAttribute(attribute: InsightAttribute) {
