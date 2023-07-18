@@ -1,10 +1,13 @@
-/**
- * The API delivers plain json objects, but for some types we need classes, so we can add extension methods
- * @param json a json object tree
- */
 import {InsightObjectClass, isInsightObject} from "./InsightObjectExtensions";
 
-export function transformJsonObjectsToClass(json: any): any {
+/**
+ * Replaces specific anonymous objects in a json structure with concrete classes.
+ * APIs deliver plain json objects, but for some types we need classes, so we can add extension methods.
+ *
+ * @param json a json object tree
+ * @return a json object tree where some anonymous objects are replaced by their corresponding class
+ */
+export function transformJsonObjectsToClass(json: any): InsightObjectClass | InsightObjectClass[] | any {
     if (isInsightObject(json)) {
         return new InsightObjectClass(json);
     } else if (Array.isArray(json)) {
