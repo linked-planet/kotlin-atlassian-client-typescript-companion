@@ -40,7 +40,7 @@ export function displayValueFor(insightObject: InsightObject | undefined, attrib
     let attribute: InsightAttribute | undefined = attributeByName(insightObject, attributeName)
     if (attribute == undefined) return undefined
     if ((attribute.schema?.maximumCardinality ?? 0) > 1) {
-        console.info("Used displayValueFor for cardinality > 1" + attributeName + " attribute:" + JSON.stringify(attribute))
+        console.warn("Used displayValueFor for cardinality > 1" + attributeName + " attribute:" + JSON.stringify(attribute))
     }
     return displayValueForAttribute(attribute);
 }
@@ -74,7 +74,7 @@ export function displayValueForAttribute(attribute: InsightAttribute) {
         case "Url":
             return (attribute as Url)?.values?.[0] ?? ""
         default: {
-            console.info("Unsupported Attribute Type:" + attribute.type + " attribute:" + JSON.stringify(attribute))
+            console.warn("Unsupported Attribute Type:" + attribute.type + " attribute:" + JSON.stringify(attribute))
             return undefined
         }
     }
@@ -112,7 +112,7 @@ export function stringValueFor(insightObject: InsightObject | undefined, attribu
     let attribute: InsightAttribute | undefined = attributeByName(insightObject, attributeName)
     if (attribute == undefined) return undefined
     if ((attribute.schema?.maximumCardinality ?? 0) > 1) {
-        console.info("Used stringValueFor for cardinality > 1" + attributeName + " attribute:" + JSON.stringify(attribute))
+        console.warn("Used stringValueFor for cardinality > 1" + attributeName + " attribute:" + JSON.stringify(attribute))
     }
     return stringValueForAttribute(attribute);
 }
@@ -146,7 +146,7 @@ export function stringValueForAttribute(attribute: InsightAttribute) {
         case "Url":
             return (attribute as Url)?.values?.[0] ?? ""
         default: {
-            console.info("Unsupported Attribute Type:" + attribute.type + " attribute:" + JSON.stringify(attribute))
+            console.warn("Unsupported Attribute Type:" + attribute.type + " attribute:" + JSON.stringify(attribute))
             return undefined
         }
     }
@@ -322,7 +322,7 @@ function asType<T>(attribute: InsightAttribute | undefined, typeString: Attribut
     if (attribute && attribute.type == typeString) {
         return attribute as unknown as T
     }
-    console.info(`Attribute.type is not ${typeString}, but${attribute?.type} attribute:${JSON.stringify(attribute)}`)
+    console.warn(`Attribute.type is not ${typeString}, but ${attribute?.type} attribute:${JSON.stringify(attribute)}`)
     return undefined
 }
 // endregion
